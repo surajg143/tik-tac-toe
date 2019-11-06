@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password reset</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<script type="text/javascript">
+	var check = function() 
+	{
+  	if (document.getElementById('newpswd').value ==document.getElementById('cnfrmpswd').value) 
+  	{
+    	document.getElementById('message').style.color = 'green';
+    	document.getElementById('message').innerHTML = 'matching';
+  	}
+  	else 
+  	{
+    	document.getElementById('message').style.color = 'red';
+    	document.getElementById('message').innerHTML = 'not matching';
+  	}
+}
+	</script>
+<center>
+	<div class="hader">
+	<h1> Password Reset</h1>
+</div>
+<label>
+	<h3 style="margin: 200px"> New Password&ensp; &emsp; &emsp;<input type="Password" name="newpswd" id="newpswd"><br><br>
+</label>
+<label>
+	 Confirm Password &emsp;<input type="Password" name="cnfrmpswd" id="cnfrmpswd" onkeyup="check();">
+	<br> &emsp; &emsp; &emsp; &emsp; &emsp;<span id='message'></span><br><br>
+</label>
+	 <input type="submit" name="pswdsubmit"></h3>
+</center>
+</body>
+</html>
